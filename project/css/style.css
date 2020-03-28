@@ -1,0 +1,83 @@
+*{
+    list-style: none;
+}
+
+html,
+body{
+    height:100%;
+    font-size: 16px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    backdrop-filter: blur(3px);
+    background: url("Nice Weather.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+
+.navbar{
+    font-size: 18px;
+    padding: 0;
+}
+
+.navbar-brand{
+    font-family: 'Nunito', sans-serif;
+    font-size: 40px;
+}
+
+.question{
+    font-family: 'Nunito', sans-serif;
+    font-size: 60px;
+}
+
+.form-control{
+    background-color: rgba(255,255,255,0.3);
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.form-control:focus{
+    background-color: rgba(255,255,255,0.9);
+
+}
+
+.city-name{
+    font-size: 64px;
+}
+
+.temperature-number{
+    font-family: 'Nunito', sans-serif;
+    font-size: 64px;
+}
+
+.degrees-symbol{
+    font-family: 'Nunito', sans-serif;
+
+    font-size: 64px;
+}
+
+.container2{
+    height: 55%;
+}
+
+.another-city{
+    font-size: 24px;
+}
+
+.footer-1{
+    display: flex;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+hr{
+    width:90%;
+    margin: 0 auto;
+    color: #fff;
+    border-color: #CCCCCC;
+}
