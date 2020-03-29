@@ -48,13 +48,12 @@ body{
 }
 
 .temperature-number{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 64px;
 }
 
 .degrees-symbol{
-    font-family: 'Nunito', sans-serif;
-
+    font-family: 'Raleway', sans-serif;
     font-size: 64px;
 }
 
@@ -67,6 +66,11 @@ body{
     width: 600px !important;
     margin-top: 0 !important;
 
+}
+
+.icon{
+    filter: invert(98%) sepia(59%) saturate(2%)
+    hue-rotate(1deg) brightness(110%) contrast(100%);
 }
 
 .another-city{
@@ -91,4 +95,8 @@ hr{
     margin: 0 auto;
     color: #fff;
     border-color: #CCCCCC;
+}
+
+.hide{
+    display: none;
 }
