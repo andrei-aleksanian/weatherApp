@@ -12,44 +12,53 @@
 
 <body class="text-light">
 
-    <div class="container">
-        <nav class="navbar">
-            <a class="navbar-brand text-white" href="index.html">Weather Today</a>
-            <div class=" navbar-expand-lg" id="navbarNav">
-                <ul class="navbar-nav mr-auto" >
-                    <li class="nav-item"><a class="nav-link text-light bright-link" href="#">Project</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <hr>
-
-    <div class="container container2">
-        <div class="row h-100" id="content">
-            <div class="col-sm-6 my-auto mx-auto ">
-                <div class="city-name mt-4 text-center">Manchester</div>
-                <div class="image row justify-content-center">
-                    <img class="col-5 " src="../css/1.svg" alt="weather">
-                    <div class="d-flex row temperature col-5 justify-content-center align-content-center">
-                        <span class="temperature-number">10</span>
-                        <span class="degrees-symbol">&deg;C</span>
-                    </div>
-                </div>
-
-                <form class="mx-auto" id="cityForm">
-                    <div class="form-group text-center">
-<!--                        <label class="question text-white" for="cityField">Where to look?</label>-->
-                        <label for="cityField" class="float-left another-city">Another city?</label>
-                        <input class="form-control" type="text" id="cityField" name="cityField" placeholder="Type a city name...">
-                    </div>
-                </form>
-            </div>
+<div class="container">
+    <nav class="navbar">
+        <a class="navbar-brand text-white" href="index.html">Weather Today</a>
+        <div class=" navbar-expand-lg" id="navbarNav">
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item"><a class="nav-link text-light bright-link" href="#">Project</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="#">Contact</a></li>
+            </ul>
         </div>
+    </nav>
+</div>
 
+<hr>
+
+<div class="container container2">
+    <div class="row justify-content-center align-content-end my-auto mx-auto" id="content">
+
+        <form class="col-12" id="cityForm">
+            <div class="form-group text-center">
+                <label class="question text-white" for="cityField">Where to look?</label>
+                <input class="form-control" type="text" id="cityField" name="cityField" placeholder="Type a city name...">
+            </div>
+        </form>
     </div>
+<!-- After form is submitted-->
+<!--    <div class="col-6 my-auto mx-auto" id="content">-->
+<!--                <div class="city-name text-center">-->
+<!--                    Manchester-->
+<!--                </div>-->
+<!--                <div class="image row justify-content-center">-->
+<!--                    <img class="col-5 " src="../css/1.svg" alt="weather">-->
+<!--                    <div class="d-flex row temperature col-5 justify-content-center align-content-center">-->
+<!--                        <span class="temperature-number">99</span>-->
+<!--                        <span class="degrees-symbol">&deg;C</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--        <form class="" id="cityForm">-->
+<!--            <div class="form-group text-center">-->
+<!--                                <label for="cityField" class="float-left another-city">Another city?</label>-->
+<!--                <input class="form-control" type="text" id="cityField" name="cityField" placeholder="Type a city name...">-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
+
+</div>
 
 <footer class="footer pt-3 fixed-bottom">
 
@@ -74,9 +83,9 @@
 <!--        </div>-->
 <!--    </div>-->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

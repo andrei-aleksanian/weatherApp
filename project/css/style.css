@@ -59,11 +59,22 @@ body{
 }
 
 .container2{
-    height: 55%;
+    height: calc(100% - 70px - 55px - 2px);
+}
+
+#content{
+    height: 380px !important;
+    width: 600px !important;
+    margin-top: 0 !important;
+
 }
 
 .another-city{
     font-size: 24px;
+}
+
+.form-group{
+    margin-bottom: 0!important;
 }
 
 .footer-1{
