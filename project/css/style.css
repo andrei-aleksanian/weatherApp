@@ -88,6 +88,10 @@ body{
     margin-bottom: 0!important;
 }
 
+.invalid-feedback{
+    font-size: 20px;
+}
+
 .footer-1{
     display: flex;
     text-decoration: none;
