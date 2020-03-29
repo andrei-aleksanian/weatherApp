@@ -33,7 +33,7 @@ body{
 
 .form-control{
     background-color: rgba(255,255,255,0.3);
-    transition: all;
+    transition: background-color;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
 }
@@ -49,12 +49,12 @@ body{
 
 .temperature-number{
     font-family: 'Raleway', sans-serif;
-    font-size: 64px;
+    font-size: 60px;
 }
 
 .degrees-symbol{
     font-family: 'Raleway', sans-serif;
-    font-size: 64px;
+    font-size: 60px;
 }
 
 .container2{
