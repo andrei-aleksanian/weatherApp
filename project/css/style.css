@@ -68,6 +68,13 @@ body{
 
 }
 
+#content2{
+    height: 380px !important;
+    width: 600px !important;
+    margin-top: 0 !important;
+
+}
+
 .icon{
     filter: invert(98%) sepia(59%) saturate(2%)
     hue-rotate(1deg) brightness(110%) contrast(100%);
