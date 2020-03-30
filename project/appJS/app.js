@@ -39,18 +39,32 @@ const fetch_weather = async (cityKey) => {
 
 // Update content on the page
 const update_content = (data) => {
-    let img = document.getElementById("img");
-    let temp = document.getElementById("temp");
-    let city_Name = document.getElementById("city_Name");
+    let img_el = document.getElementById("img");
+    let temp_el = document.getElementById("temp");
+    let city_Name_el = document.getElementById("city_Name");
 
-    city_Name.innerText = data.city_Name;
-    img.data = `../css/icons/${data.icon}.svg`;
-    temp.innerText = data.temp.toFixed(1);
+    const icon = data.weather_response.DailyForecasts[0].Day.Icon;
+    const city_Name = data.city_response[0].LocalizedName;
+    const temp = (((data.weather_response.DailyForecasts[0].Temperature.Maximum.Value +
+        data.weather_response.DailyForecasts[0].Temperature.Minimum.Value)/2 - 32)*5/9).
+    toFixed(1);
+
+    city_Name_el.innerText = city_Name;
+    img_el.data = `../css/icons/${icon}.svg`;
+    temp_el.innerText = temp;
 
     // If the error was showing, now it's fine. Because to get to this method,
     // we should successfully fetch the data first.
     cityForm.cityField.classList.remove("is-invalid");
     weather_layout();
+};
+
+// Fetching the data for both
+const new_search = async (search) => {
+    const city_response = await fetch_city(search);
+    const weather_response = await fetch_weather(city_response[0].Key);
+
+    return {city_response, weather_response};
 };
 
 // Show error message and switch to old layout
@@ -75,30 +89,14 @@ cityForm.addEventListener("submit",(e)=>{
 
         error_message.innerText = "Please provide a valid city";
     }else{
-        // Fetch the desired weather information
-        fetch_city(search)
-            .then( cityObject => {
-                // Getting the first city in the json list
-                const city_Key = cityObject[0].Key;  // Key is used in fetching weather data
-                const city_Name = cityObject[0].LocalizedName;
-
-                return {city_Key, city_Name};
+        // receive the data
+        new_search(search)
+            .then( data =>{
+                // update UI
+                update_content(data);
             })
-            .then( city => {
-                // Fetch weather now with the city ID
-                fetch_weather(city.city_Key)
-                    .then( weatherObject => {
-                        // F to C
-                        const temp = ((weatherObject.DailyForecasts[0].Temperature.Maximum.Value + weatherObject.DailyForecasts[0].Temperature.Minimum.Value)/2 - 32)*5/9;
-                        // Weirdly calculated weather icon
-                        const icon = weatherObject.DailyForecasts[0].Day.Icon;
-                        const city_Name = city.city_Name;
-                        update_content( {city_Name, temp, icon});
-                    }).catch( err =>{
-                    error_message("Couldn't connect, try again later");
-                })
-            })
-            .catch( err => {
+            .catch(err => {
+                console.log(err);
                 if(err.message === "Cannot read property 'Key' of undefined"){
                     error_message("Please provide a valid city");
                 }else{
