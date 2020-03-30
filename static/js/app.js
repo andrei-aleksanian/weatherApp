@@ -50,7 +50,7 @@ const update_content = (data) => {
     toFixed(1);
 
     city_Name_el.innerText = city_Name;
-    img_el.data = `../css/icons/${icon}.svg`;
+    img_el.data = `../static/icons/${icon}.svg`;
     temp_el.innerText = temp;
 
     // If the error was showing, now it's fine. Because to get to this method,
